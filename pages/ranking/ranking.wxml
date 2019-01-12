@@ -1,0 +1,115 @@
+<view class='rank_list'>
+
+
+  <view class='rank_list_nav'>
+
+    <view class="rank_list_title">
+      <view class="list_title_item  {{READ?'list_title_color':'default'}}" bindtap="READ">
+        阅读榜
+      </view>
+      <view class="list_title_item {{NEWS?'list_title_color':'default'}}" bindtap="NEWS">
+        新作榜
+      </view>
+      <view class="list_title_item {{COM?'list_title_color':'default'}}" bindtap="COM">
+        综合榜
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class="rank_list_box scroll">
+
+    <!-- 阅读榜 -->
+    <view class="{{READ?'show':'hide'}}">
+      <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.name}}&&img={{item.hcover}}' class="rank_list_con" wx:for='{{Read}}' wx:key='{{index}}'>
+        <view class="comic_cover_container" style="width: 100%;">
+          <image class="comic_cover" mode='widthFix' style="width: 100%;" src="{{item.hcover}}" lazy="loaded"></image>
+          <view class="comic_cover_rank">
+            <view></view>
+          </view>
+          <view class="comic_cover_info">
+            <view class="comic_cover_titleBox">
+              <!---->
+              <view class="comic_cover_title" style="font-size: 1rem;">
+                {{item.name}}
+              </view>
+              <view class="comic_cover_author" style="font-size: 0.75rem;">
+                by {{item.sina_nickname}}
+              </view>
+            </view>
+            <view class="comic_cover_desc" style="font-size: 0.75rem;">
+              {{item.watching_focus}}
+            </view>
+          </view>
+        </view>
+      </navigator>
+
+    </view>
+
+
+
+    <!-- 新作榜 -->
+    <view class="{{NEWS?'show':'hide'}}">
+      <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.name}}&&img={{item.hcover}}' class="rank_list_con" wx:for='{{News}}' wx:key='{{index}}'>
+        <view class="comic_cover_container" style="width: 100%;">
+          <image class="comic_cover" mode='widthFix' style="width: 100%;" src="{{item.hcover}}" lazy="loaded"></image>
+          <view class="comic_cover_rank">
+            <view></view>
+          </view>
+          <view class="comic_cover_info">
+            <view class="comic_cover_titleBox">
+              <!---->
+              <view class="comic_cover_title" style="font-size: 1rem;">
+                {{item.name}}
+              </view>
+              <view class="comic_cover_author" style="font-size: 0.75rem;">
+                by {{item.sina_nickname}}
+              </view>
+            </view>
+            <view class="comic_cover_desc" style="font-size: 0.75rem;">
+              {{item.watching_focus}}
+            </view>
+          </view>
+        </view>
+      </navigator>
+
+    </view>
+
+  <!-- 综合榜 -->
+<view class="{{COM?'show':'hide'}}">
+      <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.name}}&&img={{item.hcover}}' class="rank_list_con" wx:for='{{Com}}' wx:key='{{index}}'>
+        <view class="comic_cover_container" style="width: 100%;">
+          <image class="comic_cover" mode='widthFix' style="width: 100%;" src="{{item.hcover}}" lazy="loaded"></image>
+          <view class="comic_cover_rank">
+            <view></view>
+          </view>
+          <view class="comic_cover_info">
+            <view class="comic_cover_titleBox">
+              <!---->
+              <view class="comic_cover_title" style="font-size: 1rem;">
+                {{item.name}}
+              </view>
+              <view class="comic_cover_author" style="font-size: 0.75rem;">
+                by {{item.sina_nickname}}
+              </view>
+            </view>
+            <view class="comic_cover_desc" style="font-size: 0.75rem;">
+              {{item.watching_focus}}
+            </view>
+          </view>
+        </view>
+      </navigator>
+
+    </view>
+
+
+
+  </view>
+
+
+
+ 
+
+
+</view>

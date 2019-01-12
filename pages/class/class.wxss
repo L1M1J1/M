@@ -1,0 +1,12 @@
+/* pages/class/class.wxss */
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}
+
+.def{
+  color: #ccc;
+}

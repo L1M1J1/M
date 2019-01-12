@@ -1,0 +1,13 @@
+<view class="comic_play_wrap" style="background: rgba(0, 0, 0, 0.2);">
+  <view class="chapter_content" wx:for="{{ManHuaList}}" wx:key='{{index}}'>
+    <!-- <view class="comic_chapter_content" style="height: 2000.85px; width: 100%;"> -->
+      <!-- <view class="chapter_content_num">{{index}}</view> -->
+      <!---->
+      <image style='width:100%' mode='widthFix' class="chapter_content_img" data-src="{{item.mobileImgUrl}}" src="{{item.mobileImgUrl}}" lazy="loaded" />
+    <!-- </view> -->
+
+  </view>
+  <!---->
+
+  <!---->
+</view>

@@ -1,0 +1,23 @@
+<view class="end_list_box scroll">
+  <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.object_id}}&&name={{item.extra.name}}&&img={{item.image_ext_url}}' class="end_list_item" wx:for='{{WanJie}}' wx:key='index'>
+    <view class="comic_cover_container" style="width: 100%;">
+      <image src='{{item.extra.hcover}}' mode='widthFix' class="comic_cover"  lazy="loaded" style="width: 100%;"></image>
+      <!---->
+      <view class="comic_cover_info">
+        <view class="comic_cover_titleBox">
+          <view class="comic_cover_label">
+            <view class="works_label label_bg_orange">
+              <span class="works_label_text">{{item.cate_list[0].cate_cn_name}}</span>
+            </view>
+          </view>
+          <view class="comic_cover_title" style="font-size: 1rem;">
+           {{item.extra.name}}
+          </view>
+          <!---->
+        </view>
+        <!---->
+      </view>
+    </view>
+  </navigator>
+
+</view>

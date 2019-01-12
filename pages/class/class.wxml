@@ -1,0 +1,475 @@
+<view class="category">
+
+  <view class="cate_list filter_list highList">
+    <view class="cate_list_item  filter_item {{WHO?'filter_active_item':'def'}}" bindtap="WHO">
+      全部
+    </view>
+    <view class="cate_list_item filter_item {{PLO?'filter_active_item':'def'}}" bindtap="PLO">
+      剧情
+    </view>
+    <view class="cate_list_item filter_item {{LOV?'filter_active_item':'def'}}" bindtap="LOV">
+      恋爱
+    </view>
+    <view class="cate_list_item filter_item {{FUN?'filter_active_item':'def'}}" bindtap="FUN">
+      搞笑
+    </view>
+    <view class="cate_list_item filter_item {{DAI?'filter_active_item':'def'}}" bindtap="DAI">
+      日常
+    </view>
+    <view class="cate_list_item filter_item {{CEO?'filter_active_item':'def'}}" bindtap="CEO">
+      总裁
+    </view>
+    <view class="cate_list_item filter_item {{FAN?'filter_active_item':'def'}}" bindtap="FAN">
+      奇幻
+    </view>
+    <view class="cate_list_item filter_item {{JUV?'filter_active_item':'def'}}" bindtap="JUV">
+      少年
+    </view>
+    <view class="cate_list_item filter_item {{ACT?'filter_active_item':'def'}}" bindtap="ACT">
+      动作
+    </view>
+    <view class="cate_list_item filter_item {{CAM?'filter_active_item':'def'}}" bindtap="CAM">
+      校园
+    </view>
+    <view class="cate_list_item filter_item {{URB?'filter_active_item':'def'}}" bindtap="URB">
+      都市
+    </view>
+    <view class="cate_list_item filter_item {{SUS?'filter_active_item':'def'}}" bindtap="SUS">
+      悬疑
+    </view>
+    <view class="cate_list_item filter_item {{SUP?'filter_active_item':'def'}}" bindtap="SUP">
+      灵异
+    </view>
+    <view class="cate_list_item filter_item {{ANT?'filter_active_item':'def'}}" bindtap="ANT">
+      古风
+    </view>
+    <view class="cate_list_item filter_item {{OTH?'filter_active_item':'def'}}" bindtap="OTH">
+      其他
+    </view>
+  </view>
+
+  <view class="category_loaded pt30">
+    <view class="loadMoreWraper scroll">
+      <view class="loadMore">
+      <view class="{{WHO?'show':'hide'}}">
+        <view class="category_comic_container">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.comic_name}}&&img={{item.comic_hcover}}' class="comic_cover_container" style="width: 10rem;" wx:for='{{Whole.list}}' wx:key='{{index}}'>
+            <image mode='widthFix' class="comic_cover" src="{{item.comic_hcover}}" lazy="loaded" style="width: 10rem;  "></image>
+            <!---->
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <!---->
+                <view class="comic_cover_title" style="font-size: 0.875rem;">
+                  {{item.comic_name}}
+                </view>
+                <!---->
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.comic_desc}}
+              </view>
+            </view>
+          </navigator>
+          </view>
+
+
+        </view>
+
+      </view>
+
+
+          <view class="{{OTH?'show':'hide'}}">
+        <view class="category_comic_container">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.comic_name}}&&img={{item.comic_hcover}}' class="comic_cover_container" style="width: 10rem;" wx:for='{{Other.list}}' wx:key='{{index}}'>
+            <image mode='widthFix' class="comic_cover" src="{{item.comic_hcover}}" lazy="loaded" style="width: 10rem;  "></image>
+            <!---->
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <!---->
+                <view class="comic_cover_title" style="font-size: 0.875rem;">
+                  {{item.comic_name}}
+                </view>
+                <!---->
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.comic_desc}}
+              </view>
+            </view>
+          </navigator>
+          </view>
+
+
+        </view>
+
+
+
+        <view class="{{SUP?'show':'hide'}}">
+        <view class="category_comic_container">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.comic_name}}&&img={{item.comic_hcover}}' class="comic_cover_container" style="width: 10rem;" wx:for='{{Supernatural.list}}' wx:key='{{index}}'>
+            <image mode='widthFix' class="comic_cover" src="{{item.comic_hcover}}" lazy="loaded" style="width: 10rem;  "></image>
+            <!---->
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <!---->
+                <view class="comic_cover_title" style="font-size: 0.875rem;">
+                  {{item.comic_name}}
+                </view>
+                <!---->
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.comic_desc}}
+              </view>
+            </view>
+          </navigator>
+          </view>
+
+
+        </view>
+
+ 
+<view class="{{ANT?'show':'hide'}}">
+        <view class="category_comic_container">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.comic_name}}&&img={{item.comic_hcover}}' class="comic_cover_container" style="width: 10rem;" wx:for='{{Antiquity.list}}' wx:key='{{index}}'>
+            <image mode='widthFix' class="comic_cover" src="{{item.comic_hcover}}" lazy="loaded" style="width: 10rem;  "></image>
+            <!---->
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <!---->
+                <view class="comic_cover_title" style="font-size: 0.875rem;">
+                  {{item.comic_name}}
+                </view>
+                <!---->
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.comic_desc}}
+              </view>
+            </view>
+          </navigator>
+          </view>
+
+
+        </view>
+
+   
+
+
+
+
+
+
+
+
+          <view class="{{SUS?'show':'hide'}}">
+        <view class="category_comic_container">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.comic_name}}&&img={{item.comic_hcover}}' class="comic_cover_container" style="width: 10rem;" wx:for='{{Suspense.list}}' wx:key='{{index}}'>
+            <image mode='widthFix' class="comic_cover" src="{{item.comic_hcover}}" lazy="loaded" style="width: 10rem;  "></image>
+            <!---->
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <!---->
+                <view class="comic_cover_title" style="font-size: 0.875rem;">
+                  {{item.comic_name}}
+                </view>
+                <!---->
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.comic_desc}}
+              </view>
+            </view>
+          </navigator>
+          </view>
+
+
+        </view>
+
+
+
+
+
+
+
+       <view class="{{PLO?'show':'hide'}}">
+        <view class="category_comic_container">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.comic_name}}&&img={{item.comic_hcover}}' class="comic_cover_container" style="width: 10rem;" wx:for='{{Plot.list}}' wx:key='{{index}}'>
+            <image mode='widthFix' class="comic_cover" src="{{item.comic_hcover}}" lazy="loaded" style="width: 10rem;  "></image>
+            <!---->
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <!---->
+                <view class="comic_cover_title" style="font-size: 0.875rem;">
+                  {{item.comic_name}}
+                </view>
+                <!---->
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.comic_desc}}
+              </view>
+            </view>
+          </navigator>
+          </view>
+
+
+        </view>
+
+      </view>
+
+
+  <view class="{{URB?'show':'hide'}}">
+        <view class="category_comic_container">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.comic_name}}&&img={{item.comic_hcover}}' class="comic_cover_container" style="width: 10rem;" wx:for='{{Urban.list}}' wx:key='{{index}}'>
+            <image mode='widthFix' class="comic_cover" src="{{item.comic_hcover}}" lazy="loaded" style="width: 10rem;  "></image>
+            <!---->
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <!---->
+                <view class="comic_cover_title" style="font-size: 0.875rem;">
+                  {{item.comic_name}}
+                </view>
+                <!---->
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.comic_desc}}
+              </view>
+            </view>
+          </navigator>
+          </view>
+
+
+        </view>
+
+
+
+
+
+
+
+
+
+       <view class="{{ACT?'show':'hide'}}">
+        <view class="category_comic_container">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.comic_name}}&&img={{item.comic_hcover}}' class="comic_cover_container" style="width: 10rem;" wx:for='{{Action.list}}' wx:key='{{index}}'>
+            <image mode='widthFix' class="comic_cover" src="{{item.comic_hcover}}" lazy="loaded" style="width: 10rem;  "></image>
+            <!---->
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <!---->
+                <view class="comic_cover_title" style="font-size: 0.875rem;">
+                  {{item.comic_name}}
+                </view>
+                <!---->
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.comic_desc}}
+              </view>
+            </view>
+          </navigator>
+          </view>
+
+
+        </view>
+
+      </view>
+
+
+
+
+
+
+
+      
+
+       <view class="{{CAM?'show':'hide'}}">
+        <view class="category_comic_container">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.comic_name}}&&img={{item.comic_hcover}}' class="comic_cover_container" style="width: 10rem;" wx:for='{{Campus.list}}' wx:key='{{index}}'>
+            <image mode='widthFix' class="comic_cover" src="{{item.comic_hcover}}" lazy="loaded" style="width: 10rem;  "></image>
+            <!---->
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <!---->
+                <view class="comic_cover_title" style="font-size: 0.875rem;">
+                  {{item.comic_name}}
+                </view>
+                <!---->
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.comic_desc}}
+              </view>
+            </view>
+          </navigator>
+          </view>
+
+
+        </view>
+
+     
+
+
+
+      
+
+       <view class="{{LOV?'show':'hide'}}">
+        <view class="category_comic_container">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.comic_name}}&&img={{item.comic_hcover}}' class="comic_cover_container" style="width: 10rem;" wx:for='{{Love.list}}' wx:key='{{index}}'>
+            <image mode='widthFix' class="comic_cover" src="{{item.comic_hcover}}" lazy="loaded" style="width: 10rem;  "></image>
+            <!---->
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <!---->
+                <view class="comic_cover_title" style="font-size: 0.875rem;">
+                  {{item.comic_name}}
+                </view>
+                <!---->
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.comic_desc}}
+              </view>
+            </view>
+          </navigator>
+          </view>
+
+
+       
+
+      </view>
+
+      <view class="{{FUN?'show':'hide'}}">
+        <view class="category_comic_container">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.comic_name}}&&img={{item.comic_hcover}}' class="comic_cover_container" style="width: 10rem;" wx:for='{{Funny.list}}' wx:key='{{index}}'>
+            <image mode='widthFix' class="comic_cover" src="{{item.comic_hcover}}" lazy="loaded" style="width: 10rem;  "></image>
+            <!---->
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <!---->
+                <view class="comic_cover_title" style="font-size: 0.875rem;">
+                  {{item.comic_name}}
+                </view>
+                <!---->
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.comic_desc}}
+              </view>
+            </view>
+          </navigator>
+          </view>
+
+
+       
+
+      </view>
+
+
+        <view class="{{DAI?'show':'hide'}}">
+        <view class="category_comic_container">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.comic_name}}&&img={{item.comic_hcover}}' class="comic_cover_container" style="width: 10rem;" wx:for='{{Daily.list}}' wx:key='{{index}}'>
+            <image mode='widthFix' class="comic_cover" src="{{item.comic_hcover}}" lazy="loaded" style="width: 10rem;  "></image>
+            <!---->
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <!---->
+                <view class="comic_cover_title" style="font-size: 0.875rem;">
+                  {{item.comic_name}}
+                </view>
+                <!---->
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.comic_desc}}
+              </view>
+            </view>
+          </navigator>
+          </view>
+
+
+       
+
+      </view>
+
+       <view class="{{CEO?'show':'hide'}}">
+        <view class="category_comic_container">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.comic_name}}&&img={{item.comic_hcover}}' class="comic_cover_container" style="width: 10rem;" wx:for='{{Ceo.list}}' wx:key='{{index}}'>
+            <image mode='widthFix' class="comic_cover" src="{{item.comic_hcover}}" lazy="loaded" style="width: 10rem;  "></image>
+            <!---->
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <!---->
+                <view class="comic_cover_title" style="font-size: 0.875rem;">
+                  {{item.comic_name}}
+                </view>
+                <!---->
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.comic_desc}}
+              </view>
+            </view>
+          </navigator>
+          </view>
+
+
+       
+
+      </view>
+
+        <view class="{{FAN?'show':'hide'}}">
+        <view class="category_comic_container">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.comic_name}}&&img={{item.comic_hcover}}' class="comic_cover_container" style="width: 10rem;" wx:for='{{Fantasy.list}}' wx:key='{{index}}'>
+            <image mode='widthFix' class="comic_cover" src="{{item.comic_hcover}}" lazy="loaded" style="width: 10rem;  "></image>
+            <!---->
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <!---->
+                <view class="comic_cover_title" style="font-size: 0.875rem;">
+                  {{item.comic_name}}
+                </view>
+                <!---->
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.comic_desc}}
+              </view>
+            </view>
+          </navigator>
+          </view>
+
+
+       
+
+      </view>
+
+
+  <view class="{{JUV?'show':'hide'}}">
+        <view class="category_comic_container">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.comic_id}}&&name={{item.comic_name}}&&img={{item.comic_hcover}}' class="comic_cover_container" style="width: 10rem;" wx:for='{{Juvenile.list}}' wx:key='{{index}}'>
+            <image mode='widthFix' class="comic_cover" src="{{item.comic_hcover}}" lazy="loaded" style="width: 10rem;  "></image>
+            <!---->
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <!---->
+                <view class="comic_cover_title" style="font-size: 0.875rem;">
+                  {{item.comic_name}}
+                </view>
+                <!---->
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.comic_desc}}
+              </view>
+            </view>
+          </navigator>
+          </view>
+
+
+       
+
+      </view>
+
+
+      
+      
+
+
+      
+    </view>
+ 
+
+ 
+
+
+  
+
+

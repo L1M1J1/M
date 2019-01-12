@@ -1,0 +1,61 @@
+
+
+
+
+
+ .bannerCantiner {
+   position: relative
+
+ }
+
+ .bannerCantiner image {
+   width: 100%
+ }
+
+ .break_angle {
+    position: absolute;
+    bottom: -1px;
+    height: 20px
+}
+
+swiper{
+
+    height: 250px;
+}
+swiper-item{
+    width: 100%; 
+    /* height: 360px; */
+    /* height: 2px; */
+}
+swiper-item image{
+  height: 250px;
+}
+
+
+.home_menu {
+    padding: .625rem 1rem;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.home_menu .home_menu_item view {
+       line-height: 1.5rem;
+    font-size: .875rem;
+    text-align: center;
+    color: #333;
+}
+
+.home_menu .home_menu_item image {
+ width: 3.75rem;
+ height: 3.75rem;
+}
+
+
+
+
+
+
+
+

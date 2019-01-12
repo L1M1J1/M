@@ -1,0 +1,12 @@
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}
+
+
+.default{
+  color:#b3b3b3;
+}

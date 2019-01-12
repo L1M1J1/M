@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/new/new",
+      "pages/class/class",
+   
+    "pages/ranking/ranking",
+    "pages/end/end",
+    "pages/kind/kind",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/detail/JingPingDetail/JingPingDetail",
+    "pages/list/ManHuaList/ManHuaList",
+    "pages/list/QuanBuList/QuanBuList",
+    "pages/more/RenQiMore/RenQiMore",
+    "pages/more/JingPingMore/JingPingMore",
+    "pages/more/ZuiXingMore/ZuiXingMore",
+    "pages/more/ReMengMore/ReMengMore",
+    "pages/more/XiaoBianMore/XiaoBianMore",
+    "pages/more/BenZhouMore/BenZhouMore"
+  
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

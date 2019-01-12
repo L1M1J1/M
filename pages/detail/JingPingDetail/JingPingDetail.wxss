@@ -1,0 +1,13 @@
+/* pages/detail/JingPingDetail/JingPingDetail.wxss */
+
+.show{
+  display: block;
+}
+
+.hidden{
+  display: none;
+}
+
+.default{
+  color: #ccc;
+}

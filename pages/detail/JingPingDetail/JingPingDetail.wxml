@@ -1,0 +1,88 @@
+<view>
+  <!---->
+  <view class="comic_info h_comic_info">
+    <view class="comic_cover" data-src="{{imag}}" lazy="loaded" style="background-image: url({{imag}});"></view>
+    <view class="mask"></view>
+    <view class="comic_article ">
+      <view class="comic_name">
+        <span class="name">{{HeaderDetail.name}}</span>
+        <!---->
+      </view>
+      <view class="comic_tags_hot">
+        <view class="comic_tags" wx:for="{{HeaderTag}}" wx:key="{{index}}">
+
+          <span class="tags tags_last">
+            {{item.tag_name}}
+          </span>
+        </view>
+        <view class="comic_hot">
+          <span class="hot_icon"></span>
+          <span>热度值：</span>
+          <span class="hot_num">{{HeaderDetail.comic_hot_value_text}}</span>
+        </view>
+      </view>
+    </view>
+    <view class="comic_irregviewar_bg"></view>
+  </view>
+</view>
+
+
+<view class="last_time_chapter">
+  <span class="looking_chapter">暂未阅读</span>
+  <navigator  class="button_header" fontsize="24" url='/pages/list/QuanBuList/QuanBuList?id={{id}}'>
+    <button type="button"  class="comic_button" style="width: 5.5rem; height: 2.25rem; font-size: 0.875rem;">开始阅读</button>
+  </navigator>
+</view>
+
+<view class="comic_intro">
+  <view class="menu_nav">
+    <view class="menu_detail {{selected?'cur_menu':'default'}}" bindtap="selected">
+      详情
+    </view>
+    <view class="menu_catelog {{selected1?'cur_menu':'default'}}" bindtap="selected1">
+      目录
+    </view>
+    <!---->
+  </view>
+
+  <!---->
+  <!-- 详情 -->
+  <view class="{{selected?'show':'hidden'}}">
+    <view class="detail_wrap">
+      <view class="details">
+        {{HeaderDetail.description}}
+
+      </view>
+      <view class="author">
+        作者：
+        <view class="author_item">
+          <view class="avatar component_avatar author_avatar">
+            <image src="http://img.manhua.weibo.com/static/b/vcomic-h5/dist/img/defaviewt_avatar.78577bb7.png" />
+            <!---->
+          </view>
+          <span class="author_name">{{HeaderDetail.sina_nickname}}</span>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+  <!-- 目录 -->
+  <view class="{{selected1?'show':'hidden'}}">
+    <view class="catalog_wrap">
+      <navigator url='/pages/list/ManHuaList/ManHuaList?id={{item.chapter_id}}&&name={{item.chapter_name}}' wx:for='{{HeaderImg}}' wx:key='{{item.chapter_id}}'>
+        <view class="catalog_list row_catalog_list">
+          <view class="catalog_ceil">
+            <view class="chapter_name">
+              <em class="name">{{item.chapter_name}}</em>
+              <span></span>
+            </view>
+          </view>
+         
+        </view>
+        <!---->
+      </navigator>
+    </view>
+  </view>
+</view>

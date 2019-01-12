@@ -1,0 +1,16 @@
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}
+
+
+.default{
+  color:#999;
+}
+
+.act{
+  color:#333;
+}

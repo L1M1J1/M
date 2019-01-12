@@ -1,0 +1,226 @@
+<view class='bannerCantiner'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="{{beforeColor}}" indicator-active-color="{{afterColor}}">
+  <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.object_id}}&&name={{item.extra.name}}&&img={{item.image_ext_url}}' wx:for='{{banner}}' wx:key='{{item.id}}'>
+  <swiper-item >
+      <image src='{{item.image_url}}'></image>
+    </swiper-item>
+  </navigator>
+    
+
+  </swiper>
+  <image class='break_angle' src='http://img.manhua.weibo.com/static/b/vcomic-h5/dist/img/break_angle@3x.0a5acd79.png' mode='widthFix'></image>
+
+</view>
+
+<view class="home_menu">
+  <view class="home_menu_item" catchtap='toKind'>
+    <image src="http://img.manhua.weibo.com/static/b/vcomic-h5/dist/img/daypub.7d71503a.png" alt="" />
+    <view>放送表</view>
+  </view>
+  <view class="home_menu_item" catchtap='toclass'>
+    <image src="http://img.manhua.weibo.com/static/b/vcomic-h5/dist/img/catelog.3cfb4bb6.png" alt="" />
+    <view>分类</view>
+  </view>
+  <view class="home_menu_item" catchtap='toranking'>
+    <image src="http://img.manhua.weibo.com/static/b/vcomic-h5/dist/img/rank.bfd0ebb0.png" alt="" />
+    <view>榜单</view>
+  </view>
+  <view class="home_menu_item" catchtap='toEnd'>
+    <image src="http://img.manhua.weibo.com/static/b/vcomic-h5/dist/img/ending.932e7864.png" alt="" />
+    <view>完结</view>
+  </view>
+</view>
+
+
+
+<!-- 精品佳作 -->
+<view class="home_recommend_header">
+  <view class="home_recommend_title">精品佳作</view>
+  <navigator url='/pages/more/JingPingMore/JingPingMore' class="home_recommend_more">查看更多</navigator>
+</view>
+<view class='hide_scroll_bar'>
+  <view class="recommends_infinite">
+    <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.object_id}}&&name={{item.extra.name}}&&img={{item.image_ext_url}}' class="recommends_infinite_item" wx:for="{{JingPing}}" wx:key="{{index}}">
+      <view class="comic_cover_container" style="width: 14rem;">
+        <view class="comic_cover" data-src="{{item.extra.hcover}}" lazy="loaded" style="width: 14rem; height: 7.875rem; background-image: url({{item.extra.hcover}});"></view>
+        <!---->
+        <view class="comic_cover_info">
+          <view class="comic_cover_titleBox">
+            <!---->
+            <view class="comic_cover_title" style="font-size: 1rem;">
+              {{item.extra.name}}
+            </view>
+            <!---->
+          </view>
+          <view class="comic_cover_desc" style="font-size: 0.875rem;">
+            {{item.extra.watching_focus}}
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+</view>
+
+
+<!-- 人气新品 -->
+<view>
+  <view class="home_recommend_header">
+    <view class="home_recommend_title">人气作品</view>
+    <navigator  url='/pages/more/RenQiMore/RenQiMore' class="home_recommend_more">查看更多</navigator>
+  </view>
+  <view>
+    <view class="home_recommend_comics">
+      <navigator  url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.object_id}}&&name={{item.extra.name}}&&img={{item.image_ext_url}}' class="home_recommend_comic" wx:for="{{RenQi}}" wx:key="{{index}}">
+        <view class="comic_cover_container">
+          <view class="comic_cover" data-src="{{item.image_url}}" lazy="loaded" style="width: 11.5625rem; height: 6.5625rem; background-image: url({{item.image_url}});"></view>
+          <!---->
+          <view class="comic_cover_info">
+            <view class="comic_cover_titleBox">
+              <!---->
+              <view class="comic_cover_title" style="font-size: 0.875rem;">
+                {{item.extra.name}}
+              </view>
+              <!---->
+            </view>
+            <view class="comic_cover_desc" style="font-size: 0.75rem;">
+              {{item.extra.watching_focus}}
+            </view>
+          </view>
+        </view>
+      </navigator>
+
+    </view>
+  </view>
+</view>
+
+
+<!-- 最新上架 -->
+<view>
+  <view class="home_recommend_header">
+    <view class="home_recommend_title">最新上架</view>
+    <navigator  url='/pages/more/ZuiXingMore/ZuiXingMore' class="home_recommend_more">查看更多</navigator>
+  </view>
+  <view>
+    <view class="home_recommend_comics recommend_three_comic">
+      <navigator  url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.object_id}}&&name={{item.extra.name}}&&img={{item.image_ext_url}}' class="home_recommend_comic" wx:for="{{ZuiXing}}" wx:key="{{index}}">
+        <view class="comic_cover_container" style="width: 100%;">
+          <view class="comic_cover" data-src="{{item.image_url}}" lazy="loaded" style="width: 100%; height: 13.25rem; background-image: url({{item.image_url}});"></view>
+          <!---->
+          <view class="comic_cover_info">
+            <view class="comic_cover_titleBox">
+              <!---->
+              <view class="comic_cover_title" style="font-size: 0.875rem;">
+                {{item.extra.name}}
+              </view>
+              <!---->
+            </view>
+            <view class="comic_cover_desc" style="font-size: 0.75rem;">
+              {{item.extra.watching_focus}}
+            </view>
+          </view>
+        </view>
+      </navigator>
+
+    </view>
+  </view>
+</view>
+
+
+<!-- 热门连载 -->
+
+<view>
+  <view class="home_recommend_header">
+    <view class="home_recommend_title">热门连载</view>
+    <navigator  url='/pages/more/ReMengMore/ReMengMore' class="home_recommend_more">查看更多</navigator>
+  </view>
+  <view>
+    <view class="home_recommend_comics">
+      <navigator  url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.object_id}}&&name={{item.extra.name}}&&img={{item.image_ext_url}}' class="home_recommend_comic" wx:for="{{ReMeng}}" wx:key="{{index}}">
+        <view class="comic_cover_container">
+          <view class="comic_cover" data-src="{{item.image_url}}" lazy="loaded" style="width: 11.5625rem; height: 6.5625rem; background-image: url({{item.image_url}});"></view>
+          <!---->
+          <view class="comic_cover_info">
+            <view class="comic_cover_titleBox">
+              <!---->
+              <view class="comic_cover_title" style="font-size: 0.875rem;">
+                {{item.extra.name}}
+              </view>
+              <!---->
+            </view>
+            <view class="comic_cover_desc" style="font-size: 0.75rem;">
+              {{item.extra.watching_focus}}
+            </view>
+          </view>
+        </view>
+      </navigator>
+
+    </view>
+  </view>
+</view>
+
+<!-- 小编推荐 -->
+
+<view>
+  <view class="home_recommend_header">
+    <view class="home_recommend_title">小编推荐</view>
+    <navigator  url='/pages/more/XiaoBianMore/XiaoBianMore' class="home_recommend_more">查看更多</navigator>
+  </view>
+  <view>
+    <view class="home_recommend_comics recommend_three_comic">
+      <navigator  url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.object_id}}&&name={{item.extra.name}}&&img={{item.image_ext_url}}' class="home_recommend_comic" wx:for="{{XiaoBian}}" wx:key="{{index}}">
+        <view class="comic_cover_container" style="width: 100%;">
+          <view class="comic_cover" data-src="{{item.image_url}}" lazy="loaded" style="width: 100%; height: 13.25rem; background-image: url({{item.image_url}});"></view>
+          <!---->
+          <view class="comic_cover_info">
+            <view class="comic_cover_titleBox">
+              <!---->
+              <view class="comic_cover_title" style="font-size: 0.875rem;">
+                {{item.extra.name}}
+              </view>
+              <!---->
+            </view>
+            <view class="comic_cover_desc" style="font-size: 0.75rem;">
+              {{item.extra.watching_focus}}
+            </view>
+          </view>
+        </view>
+      </navigator>
+
+    </view>
+  </view>
+</view>
+
+<!-- 本周推荐 -->
+
+
+<view>
+  <view class="home_recommend_header">
+    <view class="home_recommend_title">本周推荐</view>
+    <navigator  url='/pages/more/BenZhouMore/BenZhouMore'class="home_recommend_more">查看更多</navigator>
+  </view>
+  <view>
+    <view class="home_recommend_comics">
+      <navigator  url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.object_id}}&&name={{item.extra.name}}&&img={{item.image_ext_url}}' class="home_recommend_comic" wx:for="{{BenZhou}}" wx:key="{{index}}">
+        <view class="comic_cover_container">
+          <view class="comic_cover" data-src="{{item.image_url}}" lazy="loaded" style="width: 11.5625rem; height: 6.5625rem; background-image: url({{item.image_url}});"></view>
+          <!---->
+          <view class="comic_cover_info">
+            <view class="comic_cover_titleBox">
+              <!---->
+              <view class="comic_cover_title" style="font-size: 0.875rem;">
+                {{item.extra.name}}
+              </view>
+              <!---->
+            </view>
+            <view class="comic_cover_desc" style="font-size: 0.75rem;">
+              {{item.extra.watching_focus}}
+            </view>
+          </view>
+        </view>
+      </navigator>
+
+    </view>
+  </view>
+</view>
+

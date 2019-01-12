@@ -1,0 +1,15 @@
+<view class="list_loaded scroll">
+  <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.object_id}}&&name={{item.extra.name}}&&img={{item.image_ext_url}}' class="com-item" wx:for='{{JingPingMore}}' wx:key='{{index}}'>
+    <view class="item-cover">
+      <view class="comic_cover" data-src="{{item.extra.hcover}}" lazy="loaded" style="background-image: url({{item.extra.hcover}});"></view>
+    </view>
+    <view class="item-info">
+      <view class="info-title">{{item.extra.name}}</view>
+      <view class="info-author">
+        <span class="author-name">作者：{{item.extra.sina_nickname}}</span>
+      </view>
+      <view class="info-content">{{item.extra.watching_focus}}</view>
+    </view>
+  </navigator>
+
+</view>

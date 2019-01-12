@@ -1,0 +1,208 @@
+<view class='release'>
+  <view class='release_date'>
+    <view class="release_date_day {{sat?'act':'default'}}" bindtap="sat">周六</view>
+    <view class="release_date_day {{sun?'act':'default'}}" bindtap="sun">周日</view>
+    <view class="release_date_day {{mon?'act':'default'}}" bindtap="mon">周一</view>
+    <view class="release_date_day {{tues?'act':'default'}}" bindtap="tues">周二</view>
+    <view class="release_date_day {{wed?'act':'default'}}" bindtap="wed">周三</view>
+    <view class="release_date_day {{thur?'act':'default'}}" bindtap="thur">周四</view>
+    <view class="release_date_day {{fri?'act':'default'}}" bindtap="fri">周五</view>
+  </view>
+
+
+  <!-- 今天 -->
+
+  <view class="release_loaded">
+    <view class="loadMoreWraper scroll">
+
+      <!-- 今天 -->
+      <view class=" {{fri?'show':'hide'}}">
+
+        <view class="loadMore">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.id}}&&name={{item.title}}&&img={{item.imgUrl}}' class="comic_cover_container" style="width: 100%;" wx:for='{{today}}' wx:key='{{index}}'>
+            <view class="comic_cover" data-src="{{item.imgUrl}}" lazy="loaded" style="width: 100%; height: 13.375rem; background-image: url({{item.imgUrl}});"></view>
+
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <view class="comic_cover_label">
+                  <view class="works_label label_bg_orange">
+                    <span class="works_label_text">恋爱</span>
+                  </view>
+                </view>
+                <view class="comic_cover_title" style="font-size: 1rem;">
+                  {{item.title}}
+                </view>
+
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.chapter_name}}
+              </view>
+            </view>
+          </navigator>
+        </view>
+
+      </view>
+
+      <!-- 昨天 -->
+      <view class="{{thur?'show':'hide'}}">
+        <view class="loadMore">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.id}}&&name={{item.title}}&&img={{item.imgUrl}}' class="comic_cover_container" style="width: 100%;" wx:for='{{Yes}}' wx:key='{{index}}'>
+            <view class="comic_cover" data-src="{{item.imgUrl}}" lazy="loaded" style="width: 100%; height: 13.375rem; background-image: url({{item.imgUrl}});"></view>
+
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <view class="comic_cover_label">
+                  <view class="works_label label_bg_orange">
+                    <span class="works_label_text">恋爱</span>
+                  </view>
+                </view>
+                <view class="comic_cover_title" style="font-size: 1rem;">
+                  {{item.title}}
+                </view>
+
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.chapter_name}}
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+
+      <!-- 周三 -->
+      <view class="{{wed?'show':'hide'}}">
+        <view class="loadMore">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.id}}&&name={{item.title}}&&img={{item.imgUrl}}' class="comic_cover_container" style="width: 100%;" wx:for='{{Wed}}' wx:key='{{index}}'>
+            <view class="comic_cover" data-src="{{item.imgUrl}}" lazy="loaded" style="width: 100%; height: 13.375rem; background-image: url({{item.imgUrl}});"></view>
+
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <view class="comic_cover_label">
+                  <view class="works_label label_bg_orange">
+                    <span class="works_label_text">恋爱</span>
+                  </view>
+                </view>
+                <view class="comic_cover_title" style="font-size: 1rem;">
+                  {{item.title}}
+                </view>
+
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.chapter_name}}
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+
+      <!-- 周二 -->
+      <view class="{{tues?'show':'hide'}}">
+        <view class="loadMore">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.id}}&&name={{item.title}}&&img={{item.imgUrl}}' class="comic_cover_container" style="width: 100%;" wx:for='{{Tues}}' wx:key='{{index}}'>
+            <view class="comic_cover" data-src="{{item.imgUrl}}" lazy="loaded" style="width: 100%; height: 13.375rem; background-image: url({{item.imgUrl}});"></view>
+
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <view class="comic_cover_label">
+                  <view class="works_label label_bg_orange">
+                    <span class="works_label_text">恋爱</span>
+                  </view>
+                </view>
+                <view class="comic_cover_title" style="font-size: 1rem;">
+                  {{item.title}}
+                </view>
+
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.chapter_name}}
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+
+      <!-- 周一 -->
+      <view class="{{mon?'show':'hide'}}">
+        <view class="loadMore">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.id}}&&name={{item.title}}&&img={{item.imgUrl}}' class="comic_cover_container" style="width: 100%;" wx:for='{{Mon}}' wx:key='{{index}}'>
+            <view class="comic_cover" data-src="{{item.imgUrl}}" lazy="loaded" style="width: 100%; height: 13.375rem; background-image: url({{item.imgUrl}});"></view>
+
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <view class="comic_cover_label">
+                  <view class="works_label label_bg_orange">
+                    <span class="works_label_text">恋爱</span>
+                  </view>
+                </view>
+                <view class="comic_cover_title" style="font-size: 1rem;">
+                  {{item.title}}
+                </view>
+
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.chapter_name}}
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+
+
+      <!-- 周日 -->
+      <view class="{{sun?'show':'hide'}}">
+        <view class="loadMore">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.id}}&&name={{item.title}}&&img={{item.imgUrl}}' class="comic_cover_container" style="width: 100%;" wx:for='{{Sun}}' wx:key='{{index}}'>
+            <view class="comic_cover" data-src="{{item.imgUrl}}" lazy="loaded" style="width: 100%; height: 13.375rem; background-image: url({{item.imgUrl}});"></view>
+
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <view class="comic_cover_label">
+                  <view class="works_label label_bg_orange">
+                    <span class="works_label_text">恋爱</span>
+                  </view>
+                </view>
+                <view class="comic_cover_title" style="font-size: 1rem;">
+                  {{item.title}}
+                </view>
+
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.chapter_name}}
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+
+
+       <!-- 周六 -->
+      <view class="{{sat?'show':'hide'}}">
+        <view class="loadMore">
+          <navigator url='/pages/detail/JingPingDetail/JingPingDetail?id={{item.id}}&&name={{item.title}}&&img={{item.imgUrl}}' class="comic_cover_container" style="width: 100%;" wx:for='{{Sat}}' wx:key='{{index}}'>
+            <view class="comic_cover" data-src="{{item.imgUrl}}" lazy="loaded" style="width: 100%; height: 13.375rem; background-image: url({{item.imgUrl}});"></view>
+
+            <view class="comic_cover_info">
+              <view class="comic_cover_titleBox">
+                <view class="comic_cover_label">
+                  <view class="works_label label_bg_orange">
+                    <span class="works_label_text">恋爱</span>
+                  </view>
+                </view>
+                <view class="comic_cover_title" style="font-size: 1rem;">
+                  {{item.title}}
+                </view>
+
+              </view>
+              <view class="comic_cover_desc" style="font-size: 0.75rem;">
+                {{item.chapter_name}}
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+
+
+
+    </view>
+  </view>
+</view>
